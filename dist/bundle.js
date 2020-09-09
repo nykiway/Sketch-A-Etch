@@ -93,8 +93,91 @@
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("const canvas = document.querySelector(\"#sketch-a-etch\");\nconst canvasBorder = document.querySelector(\".canvas-border\");\nconst dialContainer = document.querySelector(\".dial-container\");\nconst headingBorder = document.querySelector(\".heading-border\");\nconst shakeButton = document.querySelector(\".shake-button\");\n\nconst context = canvas.getContext(\"2d\");\nconst moveDistance = 10;\n\nconst height = canvas.height;\nconst width = canvas.width;\n\nlet x = Math.floor(Math.random() * width);\nlet y = Math.floor(Math.random() * height);\n\ncontext.lineJoin = 'dial';\ncontext.lineCap = 'dial';\ncontext.lineWidth = moveDistance;\n\ncontext.beginPath();\ncontext.moveTo(x, y);\ncontext.lineTo(x, y);\ncontext.stroke();\n\nfunction draw({ key }) {\n  context.beginPath();\n  context.moveTo(x, y);\n  switch(key) {\n    case 'MoveLeft':\n      x -= moveDistance;\n      break;\n    case 'MoveRight':\n      x += moveDistance;\n      break;\n    case 'MoveDown':\n      y += moveDistance;\n      break;\n    case 'MoveUp':\n      y -= moveDistance;\n      break;\n    default:\n      break;\n  }\n  context.lineTo(x, y);\n  context.stroke();\n}\n\n\n// handles key press\nfunction handleKeyDown(e) {\n  if (e.key.includes('Move')) {\n    e.preventDefault();\n    draw({ key: e.key });\n  }\n}\n\n// clears canvas\nfunction clearSketch() {\n  shakeSketch();\n  context.clearRect(0, 0, width, height);\n}\n\n// handles shake animation\nfunction shakeSketch() {\n\n}\n\nwindow.addEventListener('keydown', handleKeyDown);\nshakeButton.addEventListener('click', clearSketch);\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
+var canvas = document.querySelector("#sketch-a-etch");
+var canvasBorder = document.querySelector(".canvas-border");
+var dialContainer = document.querySelector(".dial-container");
+var headingBorder = document.querySelector(".heading-border");
+var shakeButton = document.querySelector(".shake-button");
+var context = canvas.getContext("2d");
+var moveDistance = 10;
+var height = canvas.height;
+var width = canvas.width;
+var x = Math.floor(Math.random() * width);
+var y = Math.floor(Math.random() * height);
+context.lineJoin = 'round';
+context.lineCap = 'round';
+context.lineWidth = moveDistance;
+context.beginPath();
+context.moveTo(x, y);
+context.lineTo(x, y);
+context.stroke();
+
+function draw(_ref) {
+  var key = _ref.key;
+  context.beginPath();
+  context.moveTo(x, y);
+
+  switch (key) {
+    case 'ArrowLeft':
+      x -= moveDistance;
+      break;
+
+    case 'ArrowRight':
+      x += moveDistance;
+      break;
+
+    case 'ArrowDown':
+      y += moveDistance;
+      break;
+
+    case 'ArrowUp':
+      y -= moveDistance;
+      break;
+
+    default:
+      break;
+  }
+
+  context.lineTo(x, y);
+  context.stroke();
+} // handles key press
+
+
+function handleKeyDown(e) {
+  if (e.key.includes("Arrow")) {
+    e.preventDefault();
+    draw({
+      key: e.key
+    });
+  }
+} // clears canvas
+
+
+function clearSketch() {
+  shakeSketch();
+  context.clearRect(0, 0, width, height);
+} // handles shake animation
+
+
+function shakeSketch() {
+  headingBorder.classList.add('shake');
+  canvasBorder.classList.add('shake');
+  canvas.classList.add('shake');
+  shakeButton.classList.add('shake');
+  canvas.addEventListener('animationend', function () {
+    headingBorder.classList.remove('shake');
+    canvasBorder.classList.remove('shake');
+    canvas.classList.remove('shake');
+    shakeButton.classList.remove('shake');
+  }), {
+    once: true
+  };
+}
+
+window.addEventListener("keydown", handleKeyDown);
+shakeButton.addEventListener('click', clearSketch);
 
 /***/ })
 
 /******/ });
+//# sourceMappingURL=bundle.js.map
