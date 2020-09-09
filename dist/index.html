@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../stylesheets/sketch-a-etch.css">
+  <link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet">
   <title>Sketch-A-Etch</title>
 </head>
 
@@ -19,10 +20,15 @@
       <canvas width="500" height="300" id="sketch-a-etch"></canvas>
     </div>
     <div class="dial-container">
-      <span class="dial dial-left"></span>
-      <span class="dial dial-right"></span>
+      <div class="dial dial-left">
+        <div class="dial dial-left-foreground"></div>
+      </div>
+      <div class="dial dial-right">
+        <div class="dial dial-right-foreground"></div>
+      </div>
     </div>
     <div class="clear-button">
+      
       <button class="shake-button">Clear</button>
     </div>
     <!-- <script src="main.js"></script> -->

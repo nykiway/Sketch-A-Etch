@@ -5,7 +5,7 @@ const headingBorder = document.querySelector(".heading-border");
 const shakeButton = document.querySelector(".shake-button");
 
 const context = canvas.getContext("2d");
-const moveDistance = 3;
+const moveDistance = 2;
 
 const height = canvas.height;
 const width = canvas.width;
@@ -15,7 +15,7 @@ let y = Math.floor(Math.random() * height);
 
 context.lineJoin = "round";
 context.lineCap = "round";
-context.lineWidth = moveDistance;
+context.lineWidth = 2;
 context.strokeStyle = "#000000";
 
 context.beginPath();
@@ -66,11 +66,13 @@ function shakeSketch() {
   canvasBorder.classList.add('shake');
   canvas.classList.add('shake');
   shakeButton.classList.add('shake');
+  dialContainer.classList.add('shake');
   canvas.addEventListener('animationend', function() {
     headingBorder.classList.remove('shake');
     canvasBorder.classList.remove('shake');
     canvas.classList.remove('shake');
     shakeButton.classList.remove('shake');
+    dialContainer.classList.remove('shake');
   }), { once: true };
 }
 
