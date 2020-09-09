@@ -13,9 +13,10 @@ const width = canvas.width;
 let x = Math.floor(Math.random() * width);
 let y = Math.floor(Math.random() * height);
 
-context.lineJoin = 'round';
-context.lineCap = 'round';
+context.lineJoin = "round";
+context.lineCap = "round";
 context.lineWidth = moveDistance;
+context.strokeStyle = "#000000";
 
 context.beginPath();
 context.moveTo(x, y);
@@ -25,18 +26,18 @@ context.stroke();
 function draw({ key }) {
   context.beginPath();
   context.moveTo(x, y);
-  switch(key) {
-    case 'ArrowLeft':
+  switch (key) {
+    case "ArrowLeft":
       x -= moveDistance;
       break;
-    case 'ArrowRight':
+    case "ArrowRight":
       x += moveDistance;
       break;
-    case 'ArrowDown':
-      y += moveDistance;
-      break;
-    case 'ArrowUp':
+    case "ArrowUp":
       y -= moveDistance;
+      break;
+    case "ArrowDown":
+      y += moveDistance;
       break;
     default:
       break;
@@ -46,10 +47,10 @@ function draw({ key }) {
 }
 
 // handles key press
-function handleKeyDown(e) {
-  if (e.key.includes("Arrow")) {
-    e.preventDefault();
-    draw({ key: e.key });
+function handleKeyDown(event) {
+  if (event.key.includes("Arrow")) {
+    event.preventDefault();
+    draw({ key: event.key });
   }
 }
 
@@ -74,5 +75,4 @@ function shakeSketch() {
 }
 
 window.addEventListener("keydown", handleKeyDown);
-shakeButton.addEventListener('click', clearSketch);
-
+shakeButton.addEventListener("click", shakeSketch);

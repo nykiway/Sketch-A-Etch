@@ -104,9 +104,10 @@ var height = canvas.height;
 var width = canvas.width;
 var x = Math.floor(Math.random() * width);
 var y = Math.floor(Math.random() * height);
-context.lineJoin = 'round';
-context.lineCap = 'round';
+context.lineJoin = "round";
+context.lineCap = "round";
 context.lineWidth = moveDistance;
+context.strokeStyle = "#000000";
 context.beginPath();
 context.moveTo(x, y);
 context.lineTo(x, y);
@@ -118,20 +119,20 @@ function draw(_ref) {
   context.moveTo(x, y);
 
   switch (key) {
-    case 'ArrowLeft':
+    case "ArrowLeft":
       x -= moveDistance;
       break;
 
-    case 'ArrowRight':
+    case "ArrowRight":
       x += moveDistance;
       break;
 
-    case 'ArrowDown':
-      y += moveDistance;
+    case "ArrowUp":
+      y -= moveDistance;
       break;
 
-    case 'ArrowUp':
-      y -= moveDistance;
+    case "ArrowDown":
+      y += moveDistance;
       break;
 
     default:
@@ -143,11 +144,11 @@ function draw(_ref) {
 } // handles key press
 
 
-function handleKeyDown(e) {
-  if (e.key.includes("Arrow")) {
-    e.preventDefault();
+function handleKeyDown(event) {
+  if (event.key.includes("Arrow")) {
+    event.preventDefault();
     draw({
-      key: e.key
+      key: event.key
     });
   }
 } // clears canvas
@@ -175,7 +176,7 @@ function shakeSketch() {
 }
 
 window.addEventListener("keydown", handleKeyDown);
-shakeButton.addEventListener('click', clearSketch);
+shakeButton.addEventListener("click", shakeSketch);
 
 /***/ })
 
