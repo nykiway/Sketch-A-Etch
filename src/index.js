@@ -5,7 +5,7 @@ const headingBorder = document.querySelector(".heading-border");
 const shakeButton = document.querySelector(".shake-button");
 
 const context = canvas.getContext("2d");
-const moveDistance = 10;
+const moveDistance = 3;
 
 const height = canvas.height;
 const width = canvas.width;
@@ -75,4 +75,4 @@ function shakeSketch() {
 }
 
 window.addEventListener("keydown", handleKeyDown);
-shakeButton.addEventListener("click", shakeSketch);
+shakeButton.addEventListener("click", clearSketch);

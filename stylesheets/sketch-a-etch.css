@@ -59,7 +59,7 @@ canvas {
 }
 
 .dial {
-  background-color: red;
+  background: red;
   border-radius: 50%;
   display: inline-block;
   height: 110px;
@@ -92,6 +92,44 @@ canvas {
   color: white;
   font-weight: 700;
   border-radius: 30px;
+}
 
+.shake-button:focus {
+  outline: 0;
+}
 
+.shake-button:hover {
+  background-color: rgb(191, 189, 189)
+}
+
+canvas.shake, 
+.canvas-border.shake,
+.heading-border.shake,
+.dial-container.shake {
+  animation: shake 0.5s linear 1;
+  justify-items: center;
+}
+
+@keyframes shake {
+
+  10%,
+  90% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  20%,
+  80% {
+    transform: translate3d(5px, 0, 0);
+  }
+
+  30%,
+  50%,
+  70% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  40%,
+  60% {
+    transform: translate3d(5px, 0, 0);
+  }
 }

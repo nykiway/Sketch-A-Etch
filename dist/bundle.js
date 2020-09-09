@@ -99,7 +99,7 @@ var dialContainer = document.querySelector(".dial-container");
 var headingBorder = document.querySelector(".heading-border");
 var shakeButton = document.querySelector(".shake-button");
 var context = canvas.getContext("2d");
-var moveDistance = 10;
+var moveDistance = 3;
 var height = canvas.height;
 var width = canvas.width;
 var x = Math.floor(Math.random() * width);
@@ -176,7 +176,7 @@ function shakeSketch() {
 }
 
 window.addEventListener("keydown", handleKeyDown);
-shakeButton.addEventListener("click", shakeSketch);
+shakeButton.addEventListener("click", clearSketch);
 
 /***/ })
 
