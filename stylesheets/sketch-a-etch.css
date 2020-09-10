@@ -160,3 +160,8 @@ canvas.shake,
     transform: translate3d(5px, 0, 0);
   }
 }
+
+footer {
+  display: flex;
+  justify-content: center;
+}
