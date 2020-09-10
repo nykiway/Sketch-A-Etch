@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Satisfy');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900');
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa');
 
 body {
-  /* background-color: rgb(238, 231, 222); */
   background-image: url("https://fridge-friend-seeds.s3-us-west-1.amazonaws.com/mosaic-white-08.jpg");
-  /* -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover; */
-  /* background-size: cover; */
+}
+
+.content-container {
   display: flex;
   justify-content: center;
 }
@@ -72,8 +71,6 @@ canvas {
   width: 110px;
   background: rgb(186,17,17);
   background: linear-gradient(180deg, rgba(186,17,17,1) 0%, rgba(255,0,0,1) 100%);
-  /* background: rgb(255,255,255);
-  background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(222,217,208,1) 100%); */
 }
 
 .dial-left-foreground,
@@ -85,8 +82,6 @@ canvas {
   border-radius: 50%;
   background: rgb(186,17,17);
   background: linear-gradient(119deg, rgba(186,17,17,1) 0%, rgba(255,0,0,1) 100%);
-  /* background: rgb(255,255,255);
-  background: linear-gradient(119deg, rgba(255,255,255,1) 0%, rgba(222,217,208,1) 100%); */
 }
 
 .dial-left {
@@ -101,32 +96,37 @@ canvas {
 
 .social-icons {
   font-size: 24px;
+  display: flex;
+  align-items: center;
+  /* margin-top: -60px; */
+  color: rgb(215, 169, 18);
+  /* margin-bottom: 20px; */
 }
 
-.clear-button {
+.social-icons a:visited {
+  color: black;
+}
+
+.fa-github-alt,
+.fa-angellist,
+.fa-linkedin {
+  padding: 5px;
+}
+
+.between-buttons {
   display: flex;
   justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: -50px;
 }
 
 .shake-button {
-  background-color: lightgrey;
-  border: none;
-  font-family: 'Raleway', sans-serif;
+  color: rgb(215, 169, 18);
   text-transform: uppercase;
-  letter-spacing: 2px;
-  padding: 10px 20px 10px 20px;
-  color: white;
+  font-family: 'Comfortaa';
   font-weight: 700;
-  border-radius: 30px;
-}
-
-.shake-button:focus {
-  outline: 0;
-}
-
-.shake-button:hover {
-  background-color: rgb(191, 189, 189)
+  letter-spacing: 2.5px;
 }
 
 canvas.shake, 
