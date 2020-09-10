@@ -99,6 +99,10 @@ canvas {
   margin-top: -30px;
 }
 
+.social-icons {
+  font-size: 24px;
+}
+
 .clear-button {
   display: flex;
   justify-content: center;
