@@ -1,24 +1,35 @@
 /* Modal Background */
 .modal-left, .modal-right {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
+  display: none;
+  position: fixed; 
+  z-index: 1;
   left: 0;
   top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  width: 100%;
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.4);
+  animation: fadein .5s;
 }
 
 /* Modal Content/Box */
 .modal-content-left, .modal-content-right {
+  font-family: 'Comfortaa';
+  font-size: 16px;
   background-color: #fefefe;
-  margin: 15% auto; /* 15% from the top and centered */
+  margin: 5% auto;
   padding: 20px;
-  border: 1px solid #888;
-  width: 80%; /* Could be more or less, depending on screen size */
+  border-radius: 30px;
+  width: 50%;
+}
+
+@keyframes fadein {
+	from {
+		opacity:0;
+	}
+	to {
+		opacity:1;
+	}
 }
 
 /* The Close Button */
@@ -36,4 +47,58 @@
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+@keyframes fadeout {
+	from {
+		opacity:1;
+	}
+	to {
+		opacity:0;
+	}
+}
+
+/* Modal Contents */
+
+.modal-content-right {
+  text-align: center;
+}
+
+.modal-content-right h2 {
+  font-size: 20px;
+  margin-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgb(181, 150, 150);
+}
+
+.about-project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 20px 20px 20px;
+}
+
+.profile-photo {
+  border-radius: 50%;
+  height: 20%;
+  width: 20%;
+}
+
+.modal-content-right > p {
+  margin-top: 20px;
+  margin-left: 20px;
+  text-align: center;
+  letter-spacing: .5px;
+}
+
+.other-projects {
+  border: 1.5px solid rgb(181, 150, 150);
+  padding: 20px 20px 20px 20px;
+  margin: 20px;
+}
+
+.other-projects:hover {
+  -webkit-transition: all .2s ease-in-out;
+  border: 1.5px solid red;
 }
