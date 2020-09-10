@@ -50,7 +50,7 @@ body {
 canvas {
   margin-top: 40px;
   margin-bottom: -5px;
-  background-color: #e0e0db;
+  background-color: #E2E5E6;
   -webkit-box-shadow: inset 10px 11px 47px -37px rgba(0,0,0,0.75);
   -moz-box-shadow: inset 10px 11px 47px -37px rgba(0,0,0,0.75);
   box-shadow: inset 10px 11px 47px -37px rgba(0,0,0,0.75);
@@ -71,6 +71,7 @@ canvas {
   width: 110px;
   background: rgb(186,17,17);
   background: linear-gradient(180deg, rgba(186,17,17,1) 0%, rgba(255,0,0,1) 100%);
+  
 }
 
 .dial-left-foreground,
@@ -87,18 +88,24 @@ canvas {
 .dial-left {
   margin-left: 30px;
   margin-top: -30px;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
 }
 
 .dial-right {
   margin-right: 30px;
   margin-top: -30px;
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
+  box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
 }
 
 .social-icons {
   font-size: 24px;
   display: flex;
   align-items: center;
-  /* margin-top: -60px; */
+  margin-top: -60px;
   color: rgb(215, 169, 18);
   /* margin-bottom: 20px; */
 }
@@ -132,7 +139,8 @@ canvas {
 canvas.shake, 
 .canvas-border.shake,
 .heading-border.shake,
-.dial-container.shake {
+.dial-container.shake,
+.between-buttons.shake {
   animation: shake 0.5s linear 1;
   justify-items: center;
 }
@@ -162,6 +170,11 @@ canvas.shake,
 }
 
 footer {
+  text-align: center;
+  color: rgb(63, 63, 63);
+  letter-spacing: 1.5px;
+  font-size: 12px;
+  margin-top: 100px;
   display: flex;
   justify-content: center;
 }

@@ -98,6 +98,7 @@ var canvasBorder = document.querySelector(".canvas-border");
 var dialContainer = document.querySelector(".dial-container");
 var headingBorder = document.querySelector(".heading-border");
 var shakeButton = document.querySelector(".shake-button");
+var betweenButtons = document.querySelector(".between-buttons");
 var context = canvas.getContext("2d");
 var moveDistance = 2;
 var height = canvas.height;
@@ -176,12 +177,14 @@ function shakeSketch() {
   canvas.classList.add('shake');
   shakeButton.classList.add('shake');
   dialContainer.classList.add('shake');
+  betweenButtons.classList.add('shake');
   canvas.addEventListener('animationend', function () {
     headingBorder.classList.remove('shake');
     canvasBorder.classList.remove('shake');
     canvas.classList.remove('shake');
     shakeButton.classList.remove('shake');
     dialContainer.classList.remove('shake');
+    betweenButtons.classList.remove('shake');
   }), {
     once: true
   };

@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" type="text/css" href="../stylesheets/reset.css">
   <link rel="stylesheet" type="text/css" href="../stylesheets/sketch-a-etch.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/modal.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <title>Sketch-A-Etch</title>
 </head>
@@ -23,11 +24,25 @@
       </div>
       <div class="dial-container">
         <div class="dial dial-left">
-          <div class="dial dial-left-foreground"></div>
+          <div class="dial dial-left-foreground">
+            <div id="myModal-left" class="modal-left">
+              <div class="modal-content-left">
+                <span class="close-left">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
+            </div>
+          </div>
         </div>
         
         <div class="dial dial-right">
-          <div class="dial dial-right-foreground"></div>
+          <div class="dial dial-right-foreground">
+            <div id="myModal-right" class="modal-right">
+              <div class="modal-content-right">
+                <span class="close-right">&times;</span>
+                <p>Some text in the Modal..</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="between-buttons">
@@ -40,12 +55,14 @@
       </div>
       
       <script src="../src/index.js"></script>
+      <script src="../src/modal.js"></script>
     </div>
   </div>
   
   
   <footer>
     <div class="other-info">
+      <p>This product is inspired by Etch-A-Sketch</p>
       <a href="www.nykiway.com"><i class="fa fa-copyright"></i> Nicole Wiehe. 2020.</a>
     </div>
   </footer>
