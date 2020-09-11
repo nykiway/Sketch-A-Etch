@@ -1,17 +1,12 @@
-const content = document.querySelector(".instructions-content");
-const dropDownBtn = document.querySelector(".dropdown-btn");
-const dropDown = document.querySelector(".instructions-dropdown");
+// Handles Drop Down Functionality for Instructions
 
+const dropdownBtn = document.querySelector('.dropdown-btn');
+const menuContent = document.querySelector('.instructions-content');
 
-function showDropdown() {
-  if(content.style.display == "block") {
-    content.style.display = "none";
+dropdownBtn.addEventListener('click', () => {
+  if (menuContent.style.display === "") {
+    menuContent.style.display = "block";
+  } else {
+    menuContent.style.display = "";
   }
-  if (dropDown.style.display == "none" || content.style.display == "none" ||) {
-    dropDown.style.display = "block";
-    content.style.display = "block";
-
-  }
-}
-
-dropDownBtn.addEventListener("click", showDropdown);
+})
