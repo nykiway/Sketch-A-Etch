@@ -105,6 +105,20 @@ canvas {
   box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.75);
 }
 
+.dial-right:hover,
+.dial-left:hover {
+  -webkit-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 2px 2px 6px 0px rgba(50, 50, 50, 0.5);
+}
+
+.dial-right:active,
+.dial-right:active {
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+  box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.5);
+}
+
 .social-icons {
   font-size: 24px;
   display: flex;

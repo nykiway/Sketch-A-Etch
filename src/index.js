@@ -20,9 +20,9 @@ context.lineJoin = "round";
 context.lineCap = "round";
 context.lineWidth = 2;
 context.strokeStyle = "#000000";
+context.textAlign = "center";
 
 context.beginPath();
-context.textAlign = "center";
 context.font = "20px sans-serif";
 context.fillText("Welcome to Sketch-A-Etch!", 250, 80)
 context.font = "16px sans-serif";
