@@ -2,10 +2,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,900');
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa');
 
-body {
-  /* background-image: url("https://fridge-friend-seeds.s3-us-west-1.amazonaws.com/mosaic-white-08.jpg"); */
-  background-color: rgb(218, 202, 202);
+body, html {
+  height: 100%;
+  background-color: #FAACA8;
+  background-image: linear-gradient(19deg, #FAACA8 0%, #DDD6F3 100%);
 }
+
 
 .content-container {
   display: flex;
@@ -196,10 +198,10 @@ canvas.shake,
 
 footer {
   text-align: center;
-  color: rgb(63, 63, 63);
+  color: white;
   letter-spacing: 1.5px;
   font-size: 12px;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   display: flex;
   justify-content: center;
 }
