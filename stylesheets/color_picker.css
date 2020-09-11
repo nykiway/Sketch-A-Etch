@@ -1,7 +1,37 @@
+/* current color */
+
+.current-color {
+  float: left;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: -500px;
+  margin-left: -285px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 30px;
+}
+
+.current-color > p {
+  font-family: 'Comfortaa';
+  margin-bottom: 30px;
+}
+
+.current-color-circle {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 3px solid lightgrey;
+}
+
+/* color bar */
+
 .color-picker {
   float: left;
   margin-top: -500px;
-  margin-left: -100px;
+  margin-left: -90px;
   background-color: white;
   border-radius: 20px;
   padding: 10px;

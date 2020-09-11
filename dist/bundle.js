@@ -119,7 +119,7 @@ context.font = "12px sans-serif";
 context.fillText("Use your arrow keys to draw.", 250, 130);
 context.fillText("Push the 'CLEAR' button to refresh your canvas.", 250, 150);
 context.fillText("Or to get rid of these instructions...", 250, 170);
-context.fillText("Have fun :)", 250, 190);
+context.fillText("Have fun 🙃", 250, 190);
 context.moveTo(x, y);
 context.lineTo(x, y);
 context.stroke();
