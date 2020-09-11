@@ -43,22 +43,18 @@ function draw({ key }) {
     case "ArrowLeft":
       x -= moveDistance;
       if (x < 0) x = 0;
-      dialRight.style.transform = 'rotate(-10deg)';
       break;
     case "ArrowRight":
       x += moveDistance;
       if (x > width) x = width;
-      dialRight.style.transform = 'rotate(10deg)';
       break;
     case "ArrowUp":
       y -= moveDistance;
       if (y < 0) y = 0;
-      dialRight.style.transform = 'rotate(10deg)';
       break;
     case "ArrowDown":
       y += moveDistance;
       if (y > height) y = height;
-      dialRight.style.transform = 'rotate(-10deg)';
       break;
     default:
       break;
@@ -66,6 +62,25 @@ function draw({ key }) {
   context.lineTo(x, y);
   context.stroke();
 }
+
+// function rotateDial({key}) {
+//   switch(key) {
+//     case "ArrowLeft":
+//       rightDial.style.transform = 'rotate(-30deg)';
+//       break;
+//     case "ArrowRight":
+//       rightDial.style.transform = 'rotate(30deg)';
+//       break;
+//     case "ArrowUp":
+//       leftDial.style.transform = 'rotate(-30deg)';
+//       break;
+//     case "ArrowDown":
+//       leftDial.style.transform = 'rotate(30deg)';
+//       break;
+//     default:
+//       break;
+//   }
+// }
 
 // handles key press
 function handleKeyDown(event) {
@@ -99,6 +114,6 @@ function shakeSketch() {
   }), { once: true };
 }
 
-
+// window.addEventListener("keypress", rotateDial)
 window.addEventListener("keydown", handleKeyDown);
 shakeButton.addEventListener("click", clearSketch);
