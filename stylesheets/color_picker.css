@@ -22,7 +22,6 @@
   height: 100px;
   width: 100px;
   border-radius: 50%;
-  background-color: transparent;
   border: 3px solid lightgrey;
 }
 
@@ -135,7 +134,7 @@
 
 .black {
   background-color: black;
-  border: 1px solid lightgrey;
+  border: 1px solid #d3d3d3;
   -webkit-transition: all .2s ease-in-out;
 }
 
@@ -145,8 +144,8 @@
 }
 
 .grey {
-  background-color: grey;
-  border: 1px solid lightgrey;
+  background-color: #808080;
+  border: 1px solid #d3d3d3;
   -webkit-transition: all .2s ease-in-out;
 }
 

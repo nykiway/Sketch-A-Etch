@@ -89,5 +89,6 @@ function shakeSketch() {
   }), { once: true };
 }
 
+
 window.addEventListener("keydown", handleKeyDown);
 shakeButton.addEventListener("click", clearSketch);
