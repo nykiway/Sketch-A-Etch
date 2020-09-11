@@ -25,6 +25,7 @@ body {
   width: 760px;
   border-radius: 30px;
   box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
+  
 }
 
 .heading-border {
@@ -51,9 +52,9 @@ canvas {
   margin-top: 40px;
   margin-bottom: -5px;
   background-color: #E2E5E6;
-  -webkit-box-shadow: inset 10px 11px 47px -37px rgba(0,0,0,0.75);
-  -moz-box-shadow: inset 10px 11px 47px -37px rgba(0,0,0,0.75);
-  box-shadow: inset 10px 11px 47px -37px rgba(0,0,0,0.75);
+  -webkit-box-shadow: inset 9px 12px 9px -12px rgba(0,0,0,0.75);
+  -moz-box-shadow: inset 9px 12px 9px -12px rgba(0,0,0,0.75);
+  box-shadow: inset 9px 12px 9px -12px rgba(0,0,0,0.75);
   border-radius: 10px;
 }
 
@@ -107,7 +108,7 @@ canvas {
   align-items: center;
   margin-top: -60px;
   color: rgb(215, 169, 18);
-  /* margin-bottom: 20px; */
+  -webkit-transition: all .5s ease-in-out;
 }
 
 .social-icons a:visited {
@@ -118,6 +119,16 @@ canvas {
 .fa-angellist,
 .fa-linkedin {
   padding: 5px;
+  -webkit-transition: all .5s ease-in-out;
+
+}
+
+.fa-github-alt:hover,
+.fa-angellist:hover,
+.fa-linkedin:hover {
+  color: rgb(167, 130, 10);
+  -webkit-transition: all .5s ease-in-out;
+
 }
 
 .between-buttons {
@@ -134,7 +145,20 @@ canvas {
   font-family: 'Comfortaa';
   font-weight: 700;
   letter-spacing: 2.5px;
+  border: 1px solid rgb(215, 169, 18);
+  padding: 10px 20px 10px 20px;
+  margin: -20px;
+  -webkit-transition: all .5s ease-in-out;
+
 }
+
+.shake-button:hover {
+  color: rgb(167, 130, 10);
+  border-color: rgb(167, 130, 10);
+  padding: 10px 35px 10px 35px;
+  -webkit-transition: all .5s ease-in-out;
+}
+
 
 canvas.shake, 
 .canvas-border.shake,
