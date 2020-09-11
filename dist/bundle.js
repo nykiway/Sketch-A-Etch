@@ -99,6 +99,8 @@ var dialContainer = document.querySelector(".dial-container");
 var headingBorder = document.querySelector(".heading-border");
 var shakeButton = document.querySelector(".shake-button");
 var betweenButtons = document.querySelector(".between-buttons");
+var leftDial = document.querySelector(".dial-left");
+var rightDial = document.querySelector(".dial-right");
 var context = canvas.getContext("2d");
 var moveDistance = 2;
 var height = canvas.height;
@@ -133,21 +135,25 @@ function draw(_ref) {
     case "ArrowLeft":
       x -= moveDistance;
       if (x < 0) x = 0;
+      dialRight.style.transform = 'rotate(-10deg)';
       break;
 
     case "ArrowRight":
       x += moveDistance;
       if (x > width) x = width;
+      dialRight.style.transform = 'rotate(10deg)';
       break;
 
     case "ArrowUp":
       y -= moveDistance;
       if (y < 0) y = 0;
+      dialRight.style.transform = 'rotate(10deg)';
       break;
 
     case "ArrowDown":
       y += moveDistance;
       if (y > height) y = height;
+      dialRight.style.transform = 'rotate(-10deg)';
       break;
 
     default:
