@@ -1,0 +1,137 @@
+.color-picker {
+  float: left;
+  margin-top: -500px;
+  margin-left: -100px;
+  background-color: white;
+  border-radius: 20px;
+  padding: 10px;
+  max-width: 50px;
+}
+
+.color {
+  height: 30px;
+  width: 50px;
+  border-radius: 30px;
+  margin-bottom: 10px;
+}
+
+.dark-blue {
+  background-color: #090446;
+  border: 1px solid #060230;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.dark-blue:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.blue {
+  background-color: #577590;
+  border: 1px solid #486177;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.blue:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.green-blue {
+  background-color: #43AA8B;
+  border: 1px solid #368e73;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.green-blue:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.green {
+  background-color: #90BE6D;
+  border: 1px solid #80a762;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.green:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.yellow {
+  background-color: #F9C74F;
+  border: 1px solid #ddaf44;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.yellow:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.orange-yellow {
+  background-color: #F8961E;
+  border: 1px solid #d88219;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.orange-yellow:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.orange {
+  background-color: #F3722C;
+  border: 1px solid #d16023;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.orange:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.red {
+ background-color: #F94144;
+ border: 1px solid #da373a;
+ -webkit-transition: all .2s ease-in-out;
+}
+
+.red:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.black {
+  background-color: black;
+  border: 1px solid lightgrey;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.black:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.grey {
+  background-color: grey;
+  border: 1px solid lightgrey;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.grey:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.white {
+  background-color: white;
+  border: 1px solid lightgrey;
+  -webkit-transition: all .2s ease-in-out;
+}
+
+.white:hover {
+  width: 70px;
+  -webkit-transition: all .2s ease-in-out;
+}
