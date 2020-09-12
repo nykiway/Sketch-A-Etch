@@ -4,6 +4,15 @@
   margin-right: -232px;
   font-family: 'Comfortaa';
   height: 80px;
+  position: relative;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  background-color: rgb(255, 255, 255);
+  padding: 20px 30px 20px 30px;
+  border-radius: 20px;
+  border: 1px solid white;
+  -webkit-transition: all .5s ease-in-out;
 }
 
 .strokes {
