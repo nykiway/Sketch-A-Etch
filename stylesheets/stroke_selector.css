@@ -1,0 +1,38 @@
+.stroke-selector {
+  float: right;
+  margin-top: -425px;
+  margin-right: -232px;
+  font-family: 'Comfortaa';
+  height: 80px;
+}
+
+.strokes {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.thin-stroke {
+  background-color: black;
+  height: 5px;
+  width: 5px;
+  border-radius: 50%;
+  border: 1px solid white;
+}
+
+.medium-stroke {
+  background-color: black;
+  border-radius: 50%;
+  height: 10px;
+  width: 10px;
+  border: 1px solid white;
+}
+
+.thick-stroke {
+  background-color: black;
+  border-radius: 50%;
+  height: 15px;
+  width: 15px;
+  border: 1px solid white;
+}
