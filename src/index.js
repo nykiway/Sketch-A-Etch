@@ -8,7 +8,7 @@ const leftDial = document.querySelector(".dial-left");
 const rightDial = document.querySelector(".dial-right");
 
 const context = canvas.getContext("2d");
-const moveDistance = 2;
+const moveDistance = 3;
 
 const height = canvas.height;
 const width = canvas.width;
