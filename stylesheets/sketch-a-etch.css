@@ -27,8 +27,8 @@ body, html {
   height: 580px;
   width: 760px;
   border-radius: 30px;
-  box-shadow: 0px 1px 10px rgba(0,0,0,0.5);
-  
+  box-shadow: 0px 8px 30px rgba(0,0,0,0.15);
+
 }
 
 .heading-border {
@@ -130,10 +130,6 @@ canvas {
   margin-top: -60px;
   color: rgb(215, 169, 18);
   -webkit-transition: all .5s ease-in-out;
-}
-
-.social-icons a:visited {
-  color: black;
 }
 
 .fa-github-alt,
