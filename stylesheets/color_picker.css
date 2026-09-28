@@ -50,6 +50,7 @@
   height: 30px;
   width: 50px;
   border-radius: 30px;
+  cursor: pointer;
 }
 
 .dark-blue {

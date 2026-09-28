@@ -22,6 +22,12 @@
   margin-top: 30px;
 }
 
+.thin-stroke,
+.medium-stroke,
+.thick-stroke {
+  cursor: pointer;
+}
+
 .thin-stroke {
   background-color: black;
   height: 5px;
