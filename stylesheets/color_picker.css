@@ -11,6 +11,9 @@
   background-color: white;
   border-radius: 20px;
   padding: 30px;
+  width: 150px;
+  box-sizing: content-box;
+  border: 1px solid white;
 }
 
 .current-color > p {
@@ -31,7 +34,7 @@
 .color-picker {
   float: left;
   box-sizing: border-box;
-  margin-top: -500px;
+  margin-top: -580px;
   margin-left: -90px;
   background-color: white;
   border-radius: 20px;
