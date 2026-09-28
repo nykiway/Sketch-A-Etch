@@ -1,13 +1,13 @@
 /* current color */
 
 .current-color {
-  float: left;
+  float: right;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  margin-top: -500px;
-  margin-left: -285px;
+  margin-top: -283px;
+  margin-right: -232px;
   background-color: white;
   border-radius: 20px;
   padding: 30px;
@@ -30,19 +30,23 @@
 
 .color-picker {
   float: left;
+  box-sizing: border-box;
   margin-top: -500px;
   margin-left: -90px;
   background-color: white;
   border-radius: 20px;
   padding: 10px;
   max-width: 50px;
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .color {
   height: 30px;
   width: 50px;
   border-radius: 30px;
-  margin-bottom: 10px;
 }
 
 .dark-blue {
