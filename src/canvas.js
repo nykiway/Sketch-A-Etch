@@ -45,6 +45,48 @@ function drawWelcomeMessage() {
   context.stroke();
 }
 
+function drawUnicornJoke() {
+  clearCanvas();
+  context.save();
+  context.strokeStyle = "#000000";
+  context.fillStyle = "#000000";
+  context.lineWidth = 2;
+  context.textAlign = "center";
+
+  const top = { x: width / 2, y: 100 };
+  const left = { x: width / 2 - 55, y: 180 };
+  const right = { x: width / 2 + 55, y: 180 };
+  const radius = 60;
+
+  [top, left, right].forEach(({ x: cx, y: cy }) => {
+    context.beginPath();
+    context.arc(cx, cy, radius, 0, Math.PI * 2);
+    context.stroke();
+  });
+
+  context.font = "13px sans-serif";
+  context.fillText("Codes Well", top.x, top.y - radius - 10);
+  context.fillText("Great w/ People", left.x - 20, left.y + radius + 18);
+  context.fillText("Ships Fast", right.x + 20, right.y + radius + 18);
+
+  context.font = "bold 15px sans-serif";
+  context.fillText("YOU?", width / 2, 165);
+
+  context.font = "11px sans-serif";
+  context.fillText("(also designs, does QA, and fixes the printer)", width / 2, 272);
+  context.font = "italic 11px sans-serif";
+  context.fillText("— every job posting, probably", width / 2, 288);
+
+  context.restore();
+
+  x = width / 2;
+  y = height - 10;
+  context.beginPath();
+  context.moveTo(x, y);
+  context.lineTo(x, y);
+  context.stroke();
+}
+
 function moveTo(nextX, nextY) {
   context.beginPath();
   context.moveTo(x, y);
@@ -134,6 +176,11 @@ export function clearSketch() {
   clearCanvas();
 }
 
+function showUnicornJoke() {
+  shakeSketch();
+  drawUnicornJoke();
+}
+
 export function initCanvas() {
   drawWelcomeMessage();
 
@@ -149,4 +196,9 @@ export function initCanvas() {
   canvas.addEventListener("touchcancel", handlePointerUp);
 
   document.querySelector(".shake-button").addEventListener("click", clearSketch);
+
+  const dialLeft = document.querySelector(".dial-left");
+  if (dialLeft) {
+    dialLeft.addEventListener("click", showUnicornJoke);
+  }
 }
