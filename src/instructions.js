@@ -1,15 +1,11 @@
-// Handles Drop Down Functionality for Instructions
+export function initInstructions() {
+  const dropdownBtn = document.querySelector(".dropdown-btn");
+  const instructionsContent = document.querySelector(".instructions-content");
+  const strokeMenu = document.querySelector(".stroke-selector");
 
-const dropdownBtn = document.querySelector('.dropdown-btn');
-const instructionsContent = document.querySelector('.instructions-content');
-const strokeMenu = document.querySelector('.stroke-selector')
-
-dropdownBtn.addEventListener('click', () => {
-  if (instructionsContent.style.display === "") {
-    instructionsContent.style.display = "block";
-    strokeMenu.style.display = "none";
-  } else {
-    instructionsContent.style.display = "";
-    strokeMenu.style.display = "block";
-  }
-})
+  dropdownBtn.addEventListener("click", () => {
+    const isOpen = instructionsContent.style.display === "block";
+    instructionsContent.style.display = isOpen ? "" : "block";
+    strokeMenu.style.display = isOpen ? "block" : "none";
+  });
+}

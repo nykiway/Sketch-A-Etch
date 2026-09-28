@@ -1,9 +1,11 @@
 const path = require("path");
+
 module.exports = {
   context: __dirname,
-  entry: "./src/index.js",
+  entry: "./src/main.js",
   output: {
     filename: "bundle.js",
+    path: path.resolve(__dirname, "dist"),
   },
   resolve: {
     extensions: [".js"],
@@ -15,8 +17,8 @@ module.exports = {
         exclude: /(node_modules)/,
         use: {
           loader: "babel-loader",
-          query: {
-            presets: ["@babel/env"],
+          options: {
+            presets: ["@babel/preset-env"],
           },
         },
       },

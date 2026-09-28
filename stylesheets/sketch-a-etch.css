@@ -59,6 +59,10 @@ canvas {
   -moz-box-shadow: inset 9px 12px 9px -12px rgba(0,0,0,0.75);
   box-shadow: inset 9px 12px 9px -12px rgba(0,0,0,0.75);
   border-radius: 10px;
+  max-width: 100%;
+  height: auto;
+  touch-action: none;
+  cursor: crosshair;
 }
 
 .dial-container {

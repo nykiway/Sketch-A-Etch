@@ -1,22 +1,24 @@
 {
   "name": "sketch-a-etch",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A vanilla JS/Canvas recreation of the classic Etch-A-Sketch toy, drawable with arrow keys, mouse, or touch.",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch --mode=development"
+    "start": "webpack --watch --mode=development",
+    "build": "webpack --mode=production",
+    "test": "echo \"No tests yet\" && exit 0"
   },
-  "keywords": [],
+  "keywords": [
+    "canvas",
+    "etch-a-sketch",
+    "vanilla-js"
+  ],
   "author": "Nicole Wiehe <nicoleoliviawiehe@gmail.com>",
   "license": "ISC",
-  "dependencies": {
-    "@babel/core": "^7.11.6",
-    "@babel/preset-env": "^7.11.5",
-    "@fortawesome/fontawesome-free": "^5.14.0",
-    "babel": "^6.23.0",
-    "babel-loader": "^8.1.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+  "devDependencies": {
+    "@babel/core": "^7.28.0",
+    "@babel/preset-env": "^7.28.0",
+    "babel-loader": "^9.2.1",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^5.1.4"
   }
 }

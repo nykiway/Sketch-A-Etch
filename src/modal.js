@@ -1,13 +1,21 @@
-let rightModal = document.querySelector(".modal-right");
-let rightBtn = document.querySelector(".dial-right");
-let rightSpan = document.querySelector(".close-right");
+export function initModal() {
+  const rightModal = document.querySelector(".modal-right");
+  const rightBtn = document.querySelector(".dial-right");
+  const otherProjectsBtn = document.querySelector(".other-projects");
 
-rightBtn.onclick = function () {
-  rightModal.style.display = "block";
-};
+  rightBtn.addEventListener("click", () => {
+    rightModal.style.display = "block";
+  });
 
-window.onclick = function (event) {
-  if (event.target == rightModal) {
-    rightModal.style.display = "none";
+  window.addEventListener("click", (event) => {
+    if (event.target === rightModal) {
+      rightModal.style.display = "none";
+    }
+  });
+
+  if (otherProjectsBtn) {
+    otherProjectsBtn.addEventListener("click", () => {
+      window.open("https://github.com/nykiway", "_blank", "noopener");
+    });
   }
-};
+}
