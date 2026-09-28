@@ -16,6 +16,7 @@
 </head>
 
 <body>
+  <p id="a11y-status" class="visually-hidden" aria-live="polite"></p>
   <div class="content-container">
     <div class="content">
       <div class="canvas-border">
@@ -24,23 +25,25 @@
           <h1 class="heading-main">Sketch-A-Etch</h1>
           <span class="heading-right">Screen</span>
         </div>
-        <canvas width="500" height="300" id="sketch-a-etch"></canvas>
+        <canvas width="500" height="300" id="sketch-a-etch" aria-label="Etch-A-Sketch drawing canvas. Draw with arrow keys, mouse, or touch.">
+          Your browser doesn't support the canvas element, so this interactive Etch-A-Sketch can't be displayed.
+        </canvas>
       </div>
-        <div class="color-picker">
-          <div class="color dark-blue"></div>
-          <div class="color blue"></div>
-          <div class="color green-blue"></div>
-          <div class="color green"></div>
-          <div class="color yellow"></div>
-          <div class="color orange-yellow"></div>
-          <div class="color orange"></div>
-          <div class="color red"></div>
-          <div class="color black"></div>
-          <div class="color grey"></div>
-          <div class="color white"></div>
+        <div class="color-picker" role="group" aria-label="Color picker">
+          <button type="button" class="color dark-blue"></button>
+          <button type="button" class="color blue"></button>
+          <button type="button" class="color green-blue"></button>
+          <button type="button" class="color green"></button>
+          <button type="button" class="color yellow"></button>
+          <button type="button" class="color orange-yellow"></button>
+          <button type="button" class="color orange"></button>
+          <button type="button" class="color red"></button>
+          <button type="button" class="color black"></button>
+          <button type="button" class="color grey"></button>
+          <button type="button" class="color white"></button>
         </div>
         <div class="instructions-dropdown">
-          <button class="dropdown-btn">Instructions</button>
+          <button type="button" class="dropdown-btn">Instructions</button>
           <div class="instructions-content">
             <h2>How to Play</h2>
             <ul class="instructions-list">
@@ -52,11 +55,11 @@
           </div>
         </div>
         <div class="stroke-selector">
-          <h2>Stroke Width</h2>
-          <div class="strokes">
-            <div class="thin-stroke"></div>
-            <div class="medium-stroke"></div>
-            <div class="thick-stroke"></div>
+          <h2 id="stroke-width-heading">Stroke Width</h2>
+          <div class="strokes" role="group" aria-labelledby="stroke-width-heading">
+            <button type="button" class="thin-stroke"></button>
+            <button type="button" class="medium-stroke"></button>
+            <button type="button" class="thick-stroke"></button>
           </div>
         </div>
       <div class="current-color">
@@ -64,15 +67,15 @@
         <div class="current-color-circle"></div>
       </div>
       <div class="dial-container">
-        <div class="dial dial-left">
+        <div class="dial dial-left" aria-label="Show a surprise">
           <div class="dial dial-left-foreground">
           </div>
         </div>
-        <div class="dial dial-right">
+        <div class="dial dial-right" aria-label="About this project">
           <div class="dial dial-right-foreground">
-            <div class="modal-right">
+            <div class="modal-right" role="dialog" aria-modal="true" aria-labelledby="about-modal-heading">
               <div class="modal-content-right">
-                <h2>About This Project</h2>
+                <h2 id="about-modal-heading">About This Project</h2>
                 <div class="about-project">
                   <img class="profile-photo" src="https://fridge-friend-seeds.s3-us-west-1.amazonaws.com/Profile_Photo.jpg"></img>
                   <p>
@@ -95,7 +98,7 @@
         </div>
       </div>
       <div class="between-buttons">
-        <button class="shake-button">Clear</button>
+        <button type="button" class="shake-button">Clear</button>
         <div class="social-icons">
           <a target="_blank" href="https://github.com/nykiway"><i class="fa fa-github-alt"></i></a>
           <a target="_blank" href="https://angel.co/u/nicole-wiehe"><i class="fa fa-angellist"></i></a>

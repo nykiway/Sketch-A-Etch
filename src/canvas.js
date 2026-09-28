@@ -1,3 +1,6 @@
+import { nextArrowPosition, pointerToCanvasPoint, createPenState } from "./geometry.js";
+import { makePressable } from "./a11y.js";
+
 export const canvas = document.querySelector("#sketch-a-etch");
 export const context = canvas.getContext("2d");
 
@@ -6,8 +9,7 @@ const height = canvas.height;
 const arrowKeyStep = 3;
 const shakeDurationMs = 500;
 
-let x = Math.floor(Math.random() * width);
-let y = Math.floor(Math.random() * height);
+const pen = createPenState(Math.floor(Math.random() * width), Math.floor(Math.random() * height));
 let isDrawing = false;
 let shakeTimeoutId = null;
 
@@ -26,6 +28,14 @@ const shakeTargets = [
   ".between-buttons",
 ].map((selector) => document.querySelector(selector)).filter(Boolean);
 
+function drawDot() {
+  const { x, y } = pen.getPosition();
+  context.beginPath();
+  context.moveTo(x, y);
+  context.lineTo(x, y);
+  context.stroke();
+}
+
 function drawWelcomeMessage() {
   context.save();
   context.fillStyle = "#000000";
@@ -39,10 +49,7 @@ function drawWelcomeMessage() {
   context.fillText("Or to get rid of these instructions...", width / 2, 170);
   context.fillText("Have fun 🙃", width / 2, 190);
   context.restore();
-  context.beginPath();
-  context.moveTo(x, y);
-  context.lineTo(x, y);
-  context.stroke();
+  drawDot();
 }
 
 function drawUnicornJoke() {
@@ -79,65 +86,39 @@ function drawUnicornJoke() {
 
   context.restore();
 
-  x = width / 2;
-  y = height - 10;
-  context.beginPath();
-  context.moveTo(x, y);
-  context.lineTo(x, y);
-  context.stroke();
+  pen.setPosition(width / 2, height - 10);
+  drawDot();
 }
 
 function moveTo(nextX, nextY) {
+  const { x, y } = pen.getPosition();
   context.beginPath();
   context.moveTo(x, y);
   context.lineTo(nextX, nextY);
   context.stroke();
-  x = nextX;
-  y = nextY;
+  pen.setPosition(nextX, nextY);
 }
 
 function getCanvasPoint(event) {
   const rect = canvas.getBoundingClientRect();
   const point = event.touches && event.touches.length ? event.touches[0] : event;
-  const scaleX = width / rect.width;
-  const scaleY = height / rect.height;
-  return {
-    x: (point.clientX - rect.left) * scaleX,
-    y: (point.clientY - rect.top) * scaleY,
-  };
+  return pointerToCanvasPoint(point.clientX, point.clientY, rect, width, height);
 }
 
 function handleKeyDown(event) {
   if (!event.key.includes("Arrow")) return;
   event.preventDefault();
 
-  let nextX = x;
-  let nextY = y;
-  switch (event.key) {
-    case "ArrowLeft":
-      nextX = Math.max(0, x - arrowKeyStep);
-      break;
-    case "ArrowRight":
-      nextX = Math.min(width, x + arrowKeyStep);
-      break;
-    case "ArrowUp":
-      nextY = Math.max(0, y - arrowKeyStep);
-      break;
-    case "ArrowDown":
-      nextY = Math.min(height, y + arrowKeyStep);
-      break;
-    default:
-      return;
-  }
-  moveTo(nextX, nextY);
+  const { x, y } = pen.getPosition();
+  const next = nextArrowPosition(event.key, x, y, width, height, arrowKeyStep);
+  moveTo(next.x, next.y);
 }
 
 function handlePointerDown(event) {
   event.preventDefault();
   isDrawing = true;
   const point = getCanvasPoint(event);
-  x = point.x;
-  y = point.y;
+  pen.setPosition(point.x, point.y);
 }
 
 function handlePointerMove(event) {
@@ -199,6 +180,6 @@ export function initCanvas() {
 
   const dialLeft = document.querySelector(".dial-left");
   if (dialLeft) {
-    dialLeft.addEventListener("click", showUnicornJoke);
+    makePressable(dialLeft, showUnicornJoke);
   }
 }

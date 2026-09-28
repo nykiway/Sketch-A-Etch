@@ -14,6 +14,13 @@ body {
   min-height: 100vh;
 }
 
+button:focus-visible,
+a:focus-visible,
+[role="button"]:focus-visible {
+  outline: 2px solid rgb(215, 169, 18);
+  outline-offset: 2px;
+}
+
 .content-container {
   flex: 1 0 auto;
   display: flex;
